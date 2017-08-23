@@ -4,10 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Tour location directions</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <section class="search-form">
+        <h1>Search artist</h1>
+
+        <!--Search bar -->
+        <div>
+            <form class="search-bar" id="searchBar" role="form" aria-live="assertive">
+                <input aria-labelledby="searchBar text-box" class="textBox" id="text-box" type="text" placeholder="Search artist..." />
+                <input aria-labelledby="searchBar submit" class="searchButton" id="submit" type="submit" value="Search" />
+            </form>
+        </div>
+
+        <!--results -->
+        <div class="js-search-results id=" search-results>
+            <ul></ul>
+        </div>
+
+    </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="script.js"></script>
 </body>
