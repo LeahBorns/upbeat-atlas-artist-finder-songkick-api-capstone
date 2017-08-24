@@ -16,7 +16,7 @@ $(document).ready(function () {
     //step2 using the input from the user make the API call to get the JSON response
 
     function DataFromUser(SearchArtist) {
-        $.getJSON("http://api.songkick.com/api/3.0/events.json?location=clientip&apikey=ibjKuqIpOmtRftG3&jsoncallback=?",
+        $.getJSON("https://api.songkick.com/api/3.0/events.json?location=clientip&apikey=ibjKuqIpOmtRftG3&jsoncallback=?",
             function (receiveData) {
                 // data is JSON response object
                 console.log(receiveData);
