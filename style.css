@@ -7,11 +7,20 @@
 }
 
 
+/*Image*/
+
+img {
+    width: 30%;
+    height: 30%;
+    margin: auto;
+}
+
+
 /*Section*/
 
 .search-form {
-    margin: 30% auto;
-    width: 50%;
+    margin: 0 auto;
+    width: 90%;
     text-align: center
 }
 
@@ -32,7 +41,35 @@
 /*search button*/
 
 .searchButton {
-    background-color: cadetblue;
+    background-color: #c0392b;
     padding: 10px;
     border-radius: 5px;
+    color: white;
+}
+
+
+/* Search Results*/
+
+.js-search-results ul {
+    margin: 0 auto;
+    width: 90%;
+    list-style-type: none;
+}
+
+.js-search-results li {
+    margin: 20px auto;
+    width: 90%;
+    text-align: center;
+    height: 40px;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    color: black;
+}
+
+.js-search-results li div {
+    display: inline;
+    width: 60%;
+    height: 30px;
+    margin-left: 10px;
+    padding-bottom: 10px;
 }

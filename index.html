@@ -10,19 +10,22 @@
 </head>
 
 <body>
+    <nav>
+        <img src="images/locationIcon.png" alt="location music note icon">
+    </nav>
     <section class="search-form">
         <h1>Search artist</h1>
 
         <!--Search bar -->
         <div>
             <form class="search-bar" id="searchBar" role="form" aria-live="assertive">
-                <input aria-labelledby="searchBar text-box" class="textBox" id="text-box" type="text" placeholder="Search artist..." />
+                <input aria-labelledby="searchBar text-box" class="textBox" id="text-box" type="text" placeholder="Search artist..." value="borns" />
                 <input aria-labelledby="searchBar submit" class="searchButton" id="submit" type="submit" value="Search" />
             </form>
         </div>
 
         <!--results -->
-        <div class="js-search-results id=" search-results>
+        <div class="js-search-results" id="search-results">
             <ul></ul>
         </div>
 

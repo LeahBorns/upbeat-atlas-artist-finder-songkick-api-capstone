@@ -16,22 +16,16 @@ $(document).ready(function () {
     //step2 using the input from the user make the API call to get the JSON response
 
     function DataFromUser(SearchArtist) {
-        $.getJSON("http://api.songkick.com/api/3.0/events.json?location=clientip&apikey=ibjKuqIpOmtRftG3&jsoncallback=?", {
-                artist: 'SearchArtist',
-                totalEntries: 1,
-                perPage: 50,
-                page: 1,
-                status: "ok"
-            },
+        $.getJSON("http://api.songkick.com/api/3.0/events.json?location=clientip&apikey=ibjKuqIpOmtRftG3&jsoncallback=?",
             function (receiveData) {
                 // data is JSON response object
                 console.log(receiveData);
                 //if there are no results it will empty the list
-                if (receiveData.results == 0) {
+                if (receiveData.resultsPage.results.length == 0) {
                     alert("Sorry, artist not found");
                 }
                 //else there are results, call the display search results
-                displayResults(receiveData.artist);
+                displayResults(receiveData.resultsPage.results.event);
             })
         $('#searchBar').prop('hidden', false);
     };
@@ -41,14 +35,25 @@ $(document).ready(function () {
 
 function displayResults(artistArray) {
 
+    console.log(artistArray);
+
     //create an empty variable to store a new list item for each result
     let buildHtmlResults = "";
 
     $.each(artistArray, function (artistArrayKey, artistArrayValue) {
         buildHtmlResults += "<li>";
+        buildHtmlResults += "<div class='event-details-start-date' >" + artistArrayValue.start.date + "</div>";
+        buildHtmlResults += "<div class='event-details-venue' >" + artistArrayValue.venue.displayName + "</div>";
+        buildHtmlResults += "<div class='event-details-city' >" + artistArrayValue.location.city + "</div>";
+        buildHtmlResults += "<div class='event-details-button-wrapper' >";
+        buildHtmlResults += "<a href='" + artistArrayValue.uri + "' class='event-details-button' target='_blank'>Details</a>";
+        buildHtmlResults += "</div>";
+        buildHtmlResults += "</li>";
+    });
 
-    })
-}
+    //use the html output to show it in the index.html
+    $('#search-results ul').html(buildHtmlResults);
+};
 
 
 /*$.ajax({
