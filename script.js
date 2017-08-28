@@ -16,16 +16,27 @@ $(document).ready(function () {
     //step2 using the input from the user make the API call to get the JSON response
 
     function DataFromUser(SearchArtist) {
-        $.getJSON("https://api.songkick.com/api/3.0/events.json?location=clientip&apikey=ibjKuqIpOmtRftG3&jsoncallback=?",
+        $.getJSON("http://api.songkick.com/api/3.0/search/artists.json?query=" + SearchArtist + "&apikey=ibjKuqIpOmtRftG3&jsoncallback=?",
             function (receiveData) {
                 // data is JSON response object
                 console.log(receiveData);
+                console.log(receiveData.resultsPage.results.artist[0].id);
                 //if there are no results it will empty the list
                 if (receiveData.resultsPage.results.length == 0) {
                     alert("Sorry, artist not found");
                 }
                 //else there are results, call the display search results
-                displayResults(receiveData.resultsPage.results.event);
+                $.getJSON("http://api.songkick.com/api/3.0/artists/" + receiveData.resultsPage.results.artist[0].id + "/calendar.json?apikey=ibjKuqIpOmtRftG3&jsoncallback=?",
+                    function (receiveData) {
+                        // data is JSON response object
+                        console.log(receiveData);
+                        //if there are no results it will empty the list
+                        if (receiveData.resultsPage.results.length == 0) {
+                            alert("Sorry, tour dates not found");
+                        }
+                        //else there are results, call the display search results
+                        displayResults(receiveData.resultsPage.results.event);
+                    })
             })
         $('#searchBar').prop('hidden', false);
     };
@@ -42,12 +53,20 @@ function displayResults(artistArray) {
 
     $.each(artistArray, function (artistArrayKey, artistArrayValue) {
         buildHtmlResults += "<li>";
+        buildHtmlResults += "<div class='event-display-name' >" + artistArrayValue.displayName + "</div>"
         buildHtmlResults += "<div class='event-details-start-date' >" + artistArrayValue.start.date + "</div>";
-        buildHtmlResults += "<div class='event-details-venue' >" + artistArrayValue.venue.displayName + "</div>";
+
         buildHtmlResults += "<div class='event-details-city' >" + artistArrayValue.location.city + "</div>";
         buildHtmlResults += "<div class='event-details-button-wrapper' >";
         buildHtmlResults += "<a href='" + artistArrayValue.uri + "' class='event-details-button' target='_blank'>Details</a>";
         buildHtmlResults += "</div>";
+        buildHtmlResults += "<div class='event-details-venue' >";
+
+        if (artistArrayValue.venue.displayName != null || artistArrayValue.location.city != null) {
+            buildHtmlResults += "<iframe width='100%' height='150px'frameborder='0' style='border:0; clear: both;' src='https://www.google.com/maps/embed/v1/place?key=AIzaSyBdNRsY4zEYnRfcQ0_ZVVd370D7yuApzhI&q=" + artistArrayValue.venue.displayName + "," + artistArrayValue.location.city + "&maptype=roadmap' allowfullscreen></iframe>";
+        }
+        buildHtmlResults += "</div>";
+
         buildHtmlResults += "</li>";
     });
 

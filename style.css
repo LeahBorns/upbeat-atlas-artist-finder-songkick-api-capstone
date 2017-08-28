@@ -9,10 +9,14 @@
 
 /*Image*/
 
+nav {
+    margin: 0 auto;
+    width: 70%;
+}
+
 img {
+    align-content: center;
     width: 30%;
-    height: 30%;
-    margin: auto;
 }
 
 
@@ -59,17 +63,40 @@ img {
 .js-search-results li {
     margin: 20px auto;
     width: 90%;
-    text-align: center;
-    height: 40px;
-    border: 1px solid darkgray;
+    height: 200px;
+    text-align: left;
+    padding: 20px;
+    border: 2px solid lightgray;
     border-radius: 5px;
     color: black;
 }
 
 .js-search-results li div {
-    display: inline;
+    display: block;
+    float: left;
     width: 60%;
-    height: 30px;
     margin-left: 10px;
-    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.js-search-results li div.event-display-name {
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+
+.js-search-results li div.event-details-start-date {
+    display: none;
+}
+
+.js-search-results li div.event-details-venue {
+    display: inline-block;
+    width: 40%;
+    float: right;
+}
+
+.event-details-button {
+    border: 2px solid green;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
 }
