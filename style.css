@@ -6,6 +6,11 @@
         font-family: 'PT Sans', sans-serif;
     }
 
+    h1 {
+        font-size: 4em;
+        margin-bottom: 5px;
+    }
+
     main {
         margin: 0 auto;
         width: 60%;
@@ -15,7 +20,7 @@
     header {
         display: inline-block;
         width: 20%;
-        vertical-align: middle;
+        vertical-align: top;
     }
 
     img {
@@ -27,6 +32,10 @@
     .search-form {
         display: inline-block;
         width: 79%;
+    }
+
+    .search-bar {
+        margin-top: 40%;
     }
     /*form*/
     /*Search box*/
@@ -62,6 +71,7 @@
         border: 2px solid lightgray;
         border-radius: 5px;
         color: black;
+        box-shadow: 5px 5px 5px #888888;
     }
 
     .js-search-results li div.event-display-name,
