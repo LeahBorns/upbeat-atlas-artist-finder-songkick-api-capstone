@@ -11,26 +11,28 @@
 </head>
 
 <body>
-    <nav>
-        <img class="animated slideInUp" src="images/locationIcon.png" alt="location music note icon">
-    </nav>
-    <section class="search-form animated fadeInUp">
-        <h1>Search artist</h1>
+    <main>
+        <header>
+            <img class="animated slideInUp" src="images/locationIcon.png" alt="location music note icon">
+        </header>
+        <section class="search-form animated fadeInUp">
+            <h1>Search for your favorite artist and find the best way to get there</h1>
 
-        <!--Search bar -->
-        <div>
-            <form class="search-bar" id="searchBar" role="form" aria-live="assertive">
-                <input aria-labelledby="searchBar text-box" class="textBox" id="text-box" type="text" placeholder="Search artist..." value="borns" />
-                <input aria-labelledby="searchBar submit" class="searchButton" id="submit" type="submit" value="Search" />
-            </form>
-        </div>
-
-        <!--results -->
-        <div class="js-search-results" id="search-results">
-            <ul></ul>
-        </div>
-
-    </section>
+            <!--Search bar -->
+            <div>
+                <form class="search-bar" id="searchBar" role="form" aria-live="assertive">
+                    <input aria-labelledby="searchBar text-box" class="textBox" id="text-box" type="text" placeholder="Search artist..." value="borns" />
+                    <input aria-labelledby="searchBar submit" class="searchButton" id="submit" type="submit" value="Search" />
+                </form>
+            </div>
+        </section>
+        <section class="result-section">
+            <!--results -->
+            <div class="js-search-results" id="search-results">
+                <ul></ul>
+            </div>
+        </section>
+    </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="script.js"></script>
 </body>

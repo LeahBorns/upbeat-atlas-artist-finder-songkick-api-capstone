@@ -53,12 +53,14 @@ function displayResults(artistArray) {
 
     $.each(artistArray, function (artistArrayKey, artistArrayValue) {
         buildHtmlResults += "<li>";
+        buildHtmlResults += "<div class='event-display-details'>";
         buildHtmlResults += "<div class='event-display-name' >" + artistArrayValue.displayName + "</div>"
         buildHtmlResults += "<div class='event-details-start-date' >" + artistArrayValue.start.date + "</div>";
 
         buildHtmlResults += "<div class='event-details-city' >" + artistArrayValue.location.city + "</div>";
         buildHtmlResults += "<div class='event-details-button-wrapper' >";
         buildHtmlResults += "<a href='" + artistArrayValue.uri + "' class='event-details-button' target='_blank'>Details</a>";
+        buildHtmlResults += "</div>";
         buildHtmlResults += "</div>";
         buildHtmlResults += "<div class='event-details-venue' >";
 
