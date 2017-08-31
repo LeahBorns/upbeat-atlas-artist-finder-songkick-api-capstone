@@ -10,31 +10,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <main>
-        <header>
-            <img class="animated slideInUp" src="images/locationIcon.png" alt="location music note icon">
-        </header>
-        <section class="search-form animated fadeInUp">
-            <div>
-                <h1>Upbeat Atlas</h1>
-                <p>Direct your way to your favorite artist</p>
-            </div>
-            <!--Search bar -->
-            <div class="search-bar">
-                <form id="searchBar" role="form" aria-live="assertive">
-                    <input aria-labelledby="searchBar text-box" class="textBox" id="text-box" type="text" placeholder="Search artist..." value="borns" />
-                    <input aria-labelledby="searchBar submit" class="searchButton" id="submit" type="submit" value="Search" />
-                </form>
-            </div>
-        </section>
-        <section class="result-section">
-            <!--results -->
-            <div class="js-search-results" id="search-results">
-                <ul></ul>
-            </div>
-        </section>
-    </main>
+<body id="page-top">
+    <nav class="animated slideInUp navbar navbar-expand-lg navbar-light fixed-top" id="nav_bar">
+        <a href="#page-top" class="navbar-brand js-scroll-trigger"><img src="images/locationIcon.png" alt="location music note icon"></a>
+        <!--Nav Name -->
+        <div class="appName">
+            <h1>Upbeat Atlas</h1>
+            <p>Direct your way to your favorite artist</p>
+        </div>
+    </nav>
+
+    <section class="search-form animated fadeInUp">
+        <!--Search bar -->
+        <form id="searchBar" role="form" aria-live="assertive">
+            <input aria-labelledby="searchBar text-box" class="textBox" id="text-box" type="text" placeholder="Search artist..." value="borns" />
+            <input aria-labelledby="searchBar submit" class="searchButton" id="submit" type="submit" value="Search" />
+        </form>
+    </section>
+
+    <section class="result-section">
+        <!--results -->
+        <div class="js-search-results" id="search-results">
+            <ul></ul>
+        </div>
+    </section>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="script.js"></script>
 </body>

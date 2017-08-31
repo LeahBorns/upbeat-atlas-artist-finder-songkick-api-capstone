@@ -11,6 +11,14 @@ $(document).ready(function () {
 
         //use the value to call the getResults function defined below
         DataFromUser(userSearch);
+
+        $(window).scroll(function () {
+            if ($("#mainNav").offset().top > 100) {
+                $("#mainNav").addClass("navbar-shrink");
+            } else {
+                $("#mainNav").removeClass("navbar-shrink");
+            }
+        });
     });
 
     //step2 using the input from the user make the API call to get the JSON response

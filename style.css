@@ -1,112 +1,153 @@
-    * {
-        border: 0;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'PT Sans', sans-serif;
-    }
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'PT Sans', sans-serif;
+}
 
-    h1 {
-        font-size: 4em;
-        margin-bottom: 5px;
-    }
+html {
+    background: rgba(0, 0, 0, 0) url("../images/UpbeatAtlasBackground.jpg") no-repeat center top 5px fixed;
+    background-size: cover;
+}
 
-    main {
-        margin: 0 auto;
-        width: 60%;
-    }
-    /*Image*/
+html::after {
+    content: "";
+    background: url(images/UpbeatAtlasBackground.jpg);
+    opacity: 0.5;
+}
 
-    header {
-        display: inline-block;
-        width: 20%;
-        vertical-align: top;
-    }
+main {
+    margin: 0 auto;
+    width: 100%;
+}
 
-    img {
-        display: block;
-        width: 100%;
-    }
-    /*Section*/
 
-    .search-form {
-        display: inline-block;
-        width: 79%;
-    }
+/*Nav Bar*/
 
-    .search-bar {
-        margin-top: 40%;
-    }
-    /*form*/
-    /*Search box*/
+nav {
+    display: inline-block;
+    width: 100%;
+    position: fixed;
+    padding-bottom: 5px;
+    border-bottom: 1px solid lightgray;
+    background: white;
+    top: 0;
+    z-index: 1;
+}
 
-    .textBox {
-        border: 2px solid lightgray;
-        width: 72%;
-        padding: 10px;
-        border-radius: 5px;
-    }
-    /*search button*/
+nav img {
+    max-width: 15%;
+    vertical-align: text-bottom;
+}
 
-    .searchButton {
-        background-color: #c0392b;
-        padding: 10px;
-        border-radius: 5px;
-        color: white;
-    }
-    /* Search Results*/
+nav div.appName {
+    display: inline-block;
+    width: 60%;
+}
 
-    .js-search-results ul {
-        margin: 0 auto;
-        width: 90%;
-        list-style-type: none;
-    }
+h1 {
+    font-size: 4em;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
 
-    .js-search-results li {
-        margin: 20px auto;
-        width: 90%;
-        height: 200px;
-        text-align: left;
-        padding: 20px;
-        border: 2px solid lightgray;
-        border-radius: 5px;
-        color: black;
-        box-shadow: 5px 5px 5px #888888;
-    }
+#mainNav.navbar-shrink {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
+    background: white;
+}
 
-    .js-search-results li div.event-display-name,
-    .js-search-results li div.event-details-city,
-    .js-search-results li div.event-details-button-wrapper,
-    .js-search-results li div.event-details-start-date {
-        display: block;
-        width: 100%;
-        margin-left: 10px;
-        margin-bottom: 20px;
-    }
 
-    .js-search-results li div.event-display-name {
-        font-weight: bolder;
-        font-size: 1.5em;
-    }
+/*Section*/
 
-    .js-search-results li div.event-display-details {
-        display: inline-block;
-        width: 60%;
-    }
+section.search-form {
+    display: block;
+    width: 80%;
+    margin-left: 15%;
+    margin-top: 30%;
+}
 
-    .js-search-results li div.event-details-start-date {
-        display: none;
-    }
 
-    .js-search-results li div.event-details-venue {
-        display: inline-block;
-        width: 40%;
-        float: right;
-    }
+/*Search form*/
 
-    .event-details-button {
-        border: 2px solid green;
-        padding: 10px;
-        text-decoration: none;
-        color: black;
-    }
+.textBox {
+    border: 2px solid lightgray;
+    width: 72%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+/*search button*/
+
+.searchButton {
+    background-color: #c0392b;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+
+/* Search Results*/
+
+section.result-section {
+    margin-top: 100px;
+}
+
+.js-search-results ul {
+    margin: 0 auto;
+    width: 90%;
+    list-style-type: none;
+}
+
+.js-search-results li {
+    margin: 20px auto;
+    width: 100%;
+    height: 200px;
+    text-align: left;
+    padding: 20px;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    color: black;
+    box-shadow: 5px 5px 5px #888888;
+    background-color: white;
+}
+
+.js-search-results li div.event-display-name,
+.js-search-results li div.event-details-city,
+.js-search-results li div.event-details-button-wrapper,
+.js-search-results li div.event-details-start-date {
+    display: block;
+    width: 100%;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.js-search-results li div.event-display-name {
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+
+.js-search-results li div.event-display-details {
+    display: inline-block;
+    width: 60%;
+}
+
+.js-search-results li div.event-details-start-date {
+    display: none;
+}
+
+.js-search-results li div.event-details-venue {
+    display: inline-block;
+    width: 40%;
+    float: right;
+}
+
+.event-details-button {
+    border: 2px solid green;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
