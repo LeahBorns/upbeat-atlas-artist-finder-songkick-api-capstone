@@ -1,4 +1,7 @@
 $(document).ready(function () {
+    // hide everything except logo on page load
+    $('.appName').hide();
+    $('#searchBar').hide();
 
     //step 1 get the input from the user
     $("#searchBar").submit(function (event) {
@@ -83,6 +86,25 @@ function displayResults(artistArray) {
     //use the html output to show it in the index.html
     $('#search-results ul').html(buildHtmlResults);
 };
+
+//Main logo will go up once clicked on and the form will gain focus
+var flag = false;
+$('#mainLogo').click(function () {
+    if (!flag) {
+        $(this).animate({
+                top: "0px",
+                left: "40px",
+                fontSize: "80px",
+                width: "175px"
+            }, 700, function () {
+                $('.instructions, #searchBar').fadeIn(500, function () {
+                    $('#text-box').focus();
+                })
+            } //End nested animate function
+        ); //End animate
+        flag = true;
+    } //End if statement
+}).end(); //End on hover
 
 
 /*$.ajax({
