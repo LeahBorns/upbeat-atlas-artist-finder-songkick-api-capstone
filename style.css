@@ -7,14 +7,14 @@
 }
 
 html {
-    background: rgba(0, 0, 0, 0) url("../images/UpbeatAtlasBackground.jpg") no-repeat center top 5px fixed;
+    background: rgba(0, 0, 0, 0) url("../images/ContourBackground.png") no-repeat center top 5px fixed;
     background-size: cover;
 }
 
 html::after {
     content: "";
-    background: url(images/UpbeatAtlasBackground.jpg);
-    opacity: 0.5;
+    background: url(images/ContourBackground.png);
+    opacity: 0.9;
 }
 
 body {
@@ -40,12 +40,12 @@ nav {
 }
 
 nav img {
-    width: 220px;
+    width: 20%;
     margin-top: 32px;
     padding-top: 7px;
     padding-left: 5px;
     position: relative;
-    top: 255px;
+    top: 10px;
     left: 40%;
     display: inline-block;
     /*width: 40%;
@@ -55,7 +55,7 @@ nav img {
 
 nav div.appName {
     display: inline-block;
-    width: 60%;
+    width: 40%;
 }
 
 h1 {

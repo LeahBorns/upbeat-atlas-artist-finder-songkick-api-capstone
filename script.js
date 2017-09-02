@@ -95,7 +95,7 @@ $('#mainLogo').click(function () {
                 top: "0px",
                 left: "40px",
                 fontSize: "80px",
-                width: "175px"
+                width: "250px"
             }, 700, function () {
                 $('.instructions, #searchBar').fadeIn(500, function () {
                     $('#text-box').focus();
