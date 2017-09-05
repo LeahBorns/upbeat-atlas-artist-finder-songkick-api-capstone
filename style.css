@@ -1,35 +1,34 @@
-* {
-    border: 0;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'PT Sans', sans-serif;
-}
+    * {
+        border: 0;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'PT Sans', sans-serif;
+    }
 
-html {
-    background: rgba(0, 0, 0, 0) url("../images/ContourBackground.png") no-repeat center top 5px fixed;
-    background-size: cover;
-}
+    html {
+        background: rgba(0, 0, 0, 0) url("../images/ContourBackground.png") no-repeat center top 5px fixed;
+        background-size: cover;
+    }
 
-html::after {
-    content: "";
-    background: url(images/ContourBackground.png);
-    opacity: 0.9;
-}
+    html::after {
+        content: "";
+        background: url(images/ContourBackground.png);
+        opacity: 0.9;
+    }
 
-body {
-    margin: 0 auto;
-    width: 100%;
-}
+    body {
+        margin: 0 auto;
+        width: 100%;
+        font-size: 16px;
+    }
+    /*Nav Bar*/
 
-
-/*Nav Bar*/
-
-nav {
-    position: relative;
-    top: 10px;
-    width: 100%;
-    /*display: inline-block;
+    nav {
+        position: fixed;
+        top: 10px;
+        width: 100%;
+        /*display: inline-block;
     width: 100%;
     position: fixed;
     padding-bottom: 5px;
@@ -37,129 +36,167 @@ nav {
     background: white;
     top: 0;
     z-index: 1;*/
-}
+    }
 
-nav img {
-    width: 20%;
-    margin-top: 32px;
-    padding-top: 7px;
-    padding-left: 5px;
-    position: relative;
-    top: 10px;
-    left: 40%;
-    display: inline-block;
-    /*width: 40%;
+    nav img {
+        width: 30%;
+        margin-top: 32px;
+        padding-top: 7px;
+        padding-left: 5px;
+        position: relative;
+        top: 10px;
+        left: 40%;
+        display: inline-block;
+        /*width: 40%;
     position: relative;
     top: 10px;*/
-}
+    }
 
-nav div.appName {
-    display: inline-block;
-    width: 40%;
-}
+    nav div.appName {
+        display: inline-block;
+        width: 60%;
+    }
 
-h1 {
-    font-size: 4em;
-    margin-bottom: 5px;
-    margin-top: 15px;
-}
+    h1 {
+        font-size: 3.5rem;
+        margin-bottom: 5px;
+        margin-top: 15px;
+    }
 
-#mainNav.navbar-shrink {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid white;
-    background: white;
-}
+    #mainNav.navbar-shrink {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid white;
+        background: white;
+    }
+    /*Section*/
 
+    section.search-form {
+        display: block;
+        width: 60%;
+        margin-left: 15%;
+        margin-top: 20%;
+    }
+    /*Search form*/
 
-/*Section*/
+    .textBox {
+        border: 2px solid lightgray;
+        width: 72%;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    /*search button*/
 
-section.search-form {
-    display: block;
-    width: 80%;
-    margin-left: 15%;
-    margin-top: 30%;
-}
+    .searchButton {
+        background-color: #c0392b;
+        padding: 10px;
+        border-radius: 5px;
+        color: white;
+    }
+    /* Search Results*/
 
+    section.result-section {
+        margin-top: 100px;
+    }
 
-/*Search form*/
+    .js-search-results ul {
+        margin: 0 auto;
+        width: 70%;
+        list-style-type: none;
+    }
 
-.textBox {
-    border: 2px solid lightgray;
-    width: 72%;
-    padding: 10px;
-    border-radius: 5px;
-}
+    .js-search-results li {
+        margin: 20px auto;
+        width: 100%;
+        height: 200px;
+        text-align: left;
+        padding: 20px;
+        border: 2px solid lightgray;
+        border-radius: 5px;
+        color: black;
+        box-shadow: 5px 5px 5px #888888;
+        background-color: white;
+    }
 
+    .js-search-results li div.event-display-name,
+    .js-search-results li div.event-details-city,
+    .js-search-results li div.event-details-button-wrapper,
+    .js-search-results li div.event-details-start-date {
+        display: block;
+        width: 100%;
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
 
-/*search button*/
+    .js-search-results li div.event-display-name {
+        font-weight: bolder;
+        font-size: 1.5rem;
+    }
 
-.searchButton {
-    background-color: #c0392b;
-    padding: 10px;
-    border-radius: 5px;
-    color: white;
-}
+    .js-search-results li div.event-display-details {
+        display: inline-block;
+        width: 60%;
+    }
 
+    .js-search-results li div.event-details-start-date {
+        display: none;
+    }
 
-/* Search Results*/
+    .js-search-results li div.event-details-venue {
+        display: inline-block;
+        width: 40%;
+        float: right;
+    }
 
-section.result-section {
-    margin-top: 100px;
-}
+    .event-details-button {
+        border: 2px solid green;
+        padding: 10px;
+        text-decoration: none;
+        color: black;
+    }
 
-.js-search-results ul {
-    margin: 0 auto;
-    width: 90%;
-    list-style-type: none;
-}
+    @media only screen and (max-width: 800px) {
+        section.search-form {
+            margin-top: 200px;
+        }
+    }
 
-.js-search-results li {
-    margin: 20px auto;
-    width: 100%;
-    height: 200px;
-    text-align: left;
-    padding: 20px;
-    border: 2px solid lightgray;
-    border-radius: 5px;
-    color: black;
-    box-shadow: 5px 5px 5px #888888;
-    background-color: white;
-}
+    @media only screen and (max-width: 640px) {
+        body {
+            font-size: 12px;
+        }
+        nav img {
+            margin-left: auto;
+            margin-right: auto;
+            width: 60%;
+        }
+        h1 {
+            font-size: 2.5rem;
+        }
+        nav div.appName {
+            display: block;
+            width: 80%;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        section.search-form {
+            margin-top: 400px;
+        }
+    }
 
-.js-search-results li div.event-display-name,
-.js-search-results li div.event-details-city,
-.js-search-results li div.event-details-button-wrapper,
-.js-search-results li div.event-details-start-date {
-    display: block;
-    width: 100%;
-    margin-left: 10px;
-    margin-bottom: 20px;
-}
-
-.js-search-results li div.event-display-name {
-    font-weight: bolder;
-    font-size: 1.5em;
-}
-
-.js-search-results li div.event-display-details {
-    display: inline-block;
-    width: 60%;
-}
-
-.js-search-results li div.event-details-start-date {
-    display: none;
-}
-
-.js-search-results li div.event-details-venue {
-    display: inline-block;
-    width: 40%;
-    float: right;
-}
-
-.event-details-button {
-    border: 2px solid green;
-    padding: 10px;
-    text-decoration: none;
-    color: black;
-}
+    @media only screen and (max-width: 480px) {
+        body {
+            font-size: 10px;
+        }
+        nav {
+            position: static;
+        }
+        section.search-form {
+            margin-top: 50px;
+        }
+        nav div.appName {
+            display: block;
+            width: 100%;
+        }
+    }
