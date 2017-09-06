@@ -124,6 +124,82 @@ section.search-form {
 }
 
 
+/*Search pop-up*/
+
+
+/* The popup (background) */
+
+.popup {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+
+/* popup Content/Box */
+
+.popup-content {
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 30px;
+    border: 1px solid #888;
+    width: 50%;
+    /* Could be more or less, depending on screen size */
+}
+
+
+/*popup header and footer*/
+
+.popup-header,
+.popup-footer {
+    padding: 2px 16px;
+    background-color: #347986;
+    color: white;
+}
+
+
+/*Pop-up body*/
+
+.popup-body {
+    padding: 2px 16px;
+}
+
+
+/* The Close Button */
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
 /* Search Results*/
 
 .result-section {
@@ -194,13 +270,6 @@ section.search-form {
 .event-details-button:hover {
     background-color: #FFC287;
 }
-
-
-/*.required-image {
-    width: 90%;
-    margin: auto;
-    position: absolute;
-}*/
 
 .js-search-results li div.event-display-required-image {}
 

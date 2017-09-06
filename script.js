@@ -15,14 +15,37 @@ $(document).ready(function () {
         //use the value to call the getResults function defined below
         DataFromUser(userSearch);
 
-        /* $(window).scroll(function () {
-             if ($("#mainNav").offset().top > 100) {
-                 $("#mainNav").addClass("navbar-shrink");
-             } else {
-                 $("#mainNav").removeClass("navbar-shrink");
-             }
-         });*/
+        //pop-up popup to explain travel options
 
+        $(function () {
+            // Get the popup
+            var popup = document.getElementById('myPopup');
+
+            // Get the button that opens the popup
+            var btn = document.getElementById("myBtn");
+
+            // Get the <span> element that closes the popup
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks on the button, open the popup
+            btn.onclick = function () {
+                popup.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the popup
+            span.onclick = function () {
+                popup.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the popup, close it
+            window.onclick = function (event) {
+                if (event.target == popup) {
+                    popup.style.display = "none";
+                }
+            }
+        });
+
+        // nav sticks once scrolling
         $(function () {
             $(window).on("scroll", function () {
                 if ($(window).scrollTop() > 50) {
@@ -70,6 +93,8 @@ function displayResults(artistArray) {
 
     console.log(artistArray);
 
+
+
     //create an empty variable to store a new list item for each result
     let buildHtmlResults = "";
 
@@ -90,7 +115,7 @@ function displayResults(artistArray) {
             buildHtmlResults += "<iframe width='100%' height='150px'frameborder='0' style='border:0; clear: both; margin:10px;' src='https://www.google.com/maps/embed/v1/place?key=AIzaSyBdNRsY4zEYnRfcQ0_ZVVd370D7yuApzhI&q=" + artistArrayValue.venue.displayName + "," + artistArrayValue.location.city + "&maptype=roadmap' allowfullscreen></iframe>";
         }
         buildHtmlResults += "</div>";
-        buildHtmlResults += "<div class='required-image' >";
+        buildHtmlResults += "<div class='event-display-required-image' >";
         buildHtmlResults += "<img class='song-kick' src='images/poweredBySongKick.png'/>";
         buildHtmlResults += "</div>";
 
@@ -118,19 +143,3 @@ $('#mainLogo').click(function () {
         flag = true;
     } //End if statement
 }).end(); //End on hover
-
-
-/*$.ajax({
-    type: "GET",
-    url: "https://app.ticketmaster.com/discovery/v2/events.json?size=1&apikey=AzyGvxmzSHkVQzP80eYbcPgvtlufG7gw",
-    async: true,
-    dataType: "json",
-    success: function (json) {
-        console.log(json);
-        // Parse the response.
-        // Do other things.
-    },
-    error: function (xhr, status, err) {
-        // This time, we do not end up here!
-    }
-});*/

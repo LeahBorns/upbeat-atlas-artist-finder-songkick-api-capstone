@@ -16,15 +16,13 @@ https://www.google.com/maps/embed/v1/place?key=AIzaSyBdNRsY4zEYnRfcQ0_ZVVd370D7y
 
 
 
-# Password Vault
-Thinkful (https://www.thinkful.com/) end of course portfolio project - a responsive MEAN stack app to securely store online username and passwords.
+# Upbeat Atlas
+Thinkful (https://www.thinkful.com/) API portfolio project - a responsive app to easily find upcoming shows and directions to your favorite bands.
 
-![Screenshots](http://jonwade.digital/github-images/password-vault-screenshot.png)
+![Screenshots](artist-finder-songkick-api-capstone/images/upbeat-atlas-screenshot.png)
 
 ## Introduction
-Password Vault allow you to securely save all the usernames and passwords you use online in one place.
-You only need to remember one thing - an encryption key. This can be a number, a word, or a phrase. This key securely encrypts all your other usernames and passwords, meaning you only have to remember that one key, not the hundreds of passwords you use day to day.
-It is very important to never forget that key, it's not stored anywhere in the app and if you do forget it, you will not be able to retrieve your saved usernames and passwords.
+Upbeat Atlas
 
 ## Use Case
 Why is this app useful? A typical internet user will need to remember a huge number of, supposedly, unique usernames and passwords to access the sites they visit day-to-day. Any site that requires registration will typically have a username and password associated to it. Whilst browsers have implemented password and username storage protocols, these methods provide risk in the situation where a user's computer is accessed without permission (through theft, hacking etc). Password Vault is designed to provide an easy-to-use, secure method of storing usernames and passwords without relying on the browser or other insecure storage methods (files, offline records etc).

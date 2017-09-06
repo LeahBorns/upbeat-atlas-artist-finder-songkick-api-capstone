@@ -25,9 +25,28 @@
     <section class="search-form animated fadeInUp">
         <!--Search bar -->
         <form class="search-bar" id="searchBar" role="form" aria-live="assertive">
-            <input aria-labelledby="searchBar text-box" class="textBox" id="text-box" type="text" placeholder="Search artist..." value="borns" />
-            <input aria-labelledby="searchBar submit" class="searchButton" id="submit" type="submit" value="Search" />
+            <input aria-labelledby="searchBar text-box" class="textBox" id="text-box" type="text" placeholder="Search artist..." />
+            <input aria-labelledby="searchBar submit" class="searchButton" id="myBtn" type="submit" value="Search" />
         </form>
+
+
+        <!--Popup content-->
+        <div id="myPopup" class="popup">
+            <div class="popup-content">
+                <div class="popup-header">
+                    <span class="close">&times;</span>
+                    <h2>Before finding directions...</h2>
+                </div>
+                <div class="popup-body">
+                    <br>
+                    <p>...consider biking, taking public transportation or carpooling to your next event. <br>
+                        <br><strong>Fun Fact:</strong> If 100 people were to take advantage of the carpool option every day, more than of 1,320 pounds of carbon monoxide and 2,376,000 pounds of carbon dioxide could be removed from the air.</p>
+                    <br>
+                </div>
+                <div class="popup-footer"></div>
+            </div>
+        </div>
+
     </section>
 
     <section class="result-section">
