@@ -54,3 +54,7 @@ You can access Password Vault at http://pw-vault.com
 * All encryption of usernames and passwords saved by users is performed in the browser, ensuring that the encryption key is never stored in the database nor sent over the internet. The key is only held in memory as long as its value appears in the input field. No cookies or browser-side data stores are used in the app.
 * The Mongo database is further secured with SCRAM-SHA1 access authentication. Despite this, safeguards have been built in to ensure that even if the db was penetrated, all sensitive data is secure. All sensitive data is stored in either encrypted or hashed form in the database. Even if the encryption key used by the server to encrypt the username of registered users is compromised, email addresses and password are hashed and irrecoverable, and the actual username and password records stored by the users are encrypted using their own encryption key which is not stored anywhere in the application. Thus, even in the event of a server hack, no sensitive data can be obtained.
 * The app is deployed into an Ubuntu 14.04 environment, kept running using Forever.
+
+
+margin-left: 15%;
+margin-top: 20%;

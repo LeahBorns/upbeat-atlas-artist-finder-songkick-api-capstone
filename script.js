@@ -80,8 +80,8 @@ function displayResults(artistArray) {
         buildHtmlResults += "<div class='event-details-start-date' >" + artistArrayValue.start.date + "</div>";
 
         buildHtmlResults += "<div class='event-details-city' >" + artistArrayValue.location.city + "</div>";
-        buildHtmlResults += "<div class='event-details-button-wrapper' >";
-        buildHtmlResults += "<a href='" + artistArrayValue.uri + "' class='event-details-button' target='_blank'>Details</a>";
+
+        buildHtmlResults += "<a href='" + artistArrayValue.uri + "' class='event-details-button' target='_blank'>More Info</a>";
         buildHtmlResults += "</div>";
         buildHtmlResults += "</div>";
         buildHtmlResults += "<div class='event-details-venue' >";
@@ -89,6 +89,9 @@ function displayResults(artistArray) {
         if (artistArrayValue.venue.displayName != null || artistArrayValue.location.city != null) {
             buildHtmlResults += "<iframe width='100%' height='150px'frameborder='0' style='border:0; clear: both; margin:10px;' src='https://www.google.com/maps/embed/v1/place?key=AIzaSyBdNRsY4zEYnRfcQ0_ZVVd370D7yuApzhI&q=" + artistArrayValue.venue.displayName + "," + artistArrayValue.location.city + "&maptype=roadmap' allowfullscreen></iframe>";
         }
+        buildHtmlResults += "</div>";
+        buildHtmlResults += "<div class='required-image' >";
+        buildHtmlResults += "<img class='song-kick' src='images/poweredBySongKick.png'/>";
         buildHtmlResults += "</div>";
 
         buildHtmlResults += "</li>";
