@@ -28,7 +28,7 @@ $(document).ready(function () {
             var span = document.getElementsByClassName("close")[0];
 
             // When the user clicks on the button, open the popup
-            btn.onclick = function () {
+            btn.click = function () {
                 popup.style.display = "block";
             }
 

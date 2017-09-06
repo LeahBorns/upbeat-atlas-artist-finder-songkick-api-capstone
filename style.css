@@ -8,7 +8,7 @@
 }
 
 html {
-    background: rgba(0, 0, 0, 0) url("../images/ContourBackgroundColor.png") no-repeat center top 5px fixed;
+    background: rgba(0, 0, 0, 0) url("../images/ContourBackgroundColor.png") no-repeat center top fixed;
     background-size: cover;
 }
 
@@ -30,7 +30,8 @@ body {
 nav {
     position: fixed;
     width: 100%;
-    top: 10px;
+    top: 0;
+    z-index: 1000;
     /*display: inline-block;
     width: 100%;
     position: fixed;
@@ -50,7 +51,6 @@ nav a img {
     top: 10px;
     left: 35%;
     display: inline-block;
-    z-index: 0;
     /*width: 40%;
     position: relative;
     top: 10px;*/
@@ -134,7 +134,7 @@ section.search-form {
     /* Hidden by default */
     position: fixed;
     /* Stay in place */
-    z-index: 1;
+    z-index: 9999;
     /* Sit on top */
     left: 0;
     top: 0;
