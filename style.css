@@ -216,6 +216,9 @@ section.search-form {
     section.search-form {
         margin-top: 200px;
     }
+    .js-search-results li {
+        width: 70%;
+    }
 }
 
 @media only screen and (max-width: 640px) {
@@ -232,7 +235,7 @@ section.search-form {
     }
     nav div.appName {
         display: inline-block;
-        width: 80%;
+        width: 70%;
         text-align: center;
         margin-left: auto;
         margin-right: auto;
@@ -240,8 +243,8 @@ section.search-form {
     section.search-form {
         margin-top: 400px;
     }
-    .song-kick {
-        top: 30px;
+    .js-search-results li {
+        width: 90%;
     }
 }
 
