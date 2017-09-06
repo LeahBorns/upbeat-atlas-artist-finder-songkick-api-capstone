@@ -15,12 +15,23 @@ $(document).ready(function () {
         //use the value to call the getResults function defined below
         DataFromUser(userSearch);
 
-        $(window).scroll(function () {
-            if ($("#mainNav").offset().top > 100) {
-                $("#mainNav").addClass("navbar-shrink");
-            } else {
-                $("#mainNav").removeClass("navbar-shrink");
-            }
+        /* $(window).scroll(function () {
+             if ($("#mainNav").offset().top > 100) {
+                 $("#mainNav").addClass("navbar-shrink");
+             } else {
+                 $("#mainNav").removeClass("navbar-shrink");
+             }
+         });*/
+
+        $(function () {
+            $(window).on("scroll", function () {
+                if ($(window).scrollTop() > 50) {
+                    $("#nav_bar").addClass("active");
+                } else {
+                    //remove the background property so it comes transparent again (defined in your css)
+                    $("#nav_bar").removeClass("active");
+                }
+            });
         });
     });
 
@@ -76,7 +87,7 @@ function displayResults(artistArray) {
         buildHtmlResults += "<div class='event-details-venue' >";
 
         if (artistArrayValue.venue.displayName != null || artistArrayValue.location.city != null) {
-            buildHtmlResults += "<iframe width='100%' height='150px'frameborder='0' style='border:0; clear: both;' src='https://www.google.com/maps/embed/v1/place?key=AIzaSyBdNRsY4zEYnRfcQ0_ZVVd370D7yuApzhI&q=" + artistArrayValue.venue.displayName + "," + artistArrayValue.location.city + "&maptype=roadmap' allowfullscreen></iframe>";
+            buildHtmlResults += "<iframe width='100%' height='150px'frameborder='0' style='border:0; clear: both; margin:10px;' src='https://www.google.com/maps/embed/v1/place?key=AIzaSyBdNRsY4zEYnRfcQ0_ZVVd370D7yuApzhI&q=" + artistArrayValue.venue.displayName + "," + artistArrayValue.location.city + "&maptype=roadmap' allowfullscreen></iframe>";
         }
         buildHtmlResults += "</div>";
 
@@ -94,7 +105,6 @@ $('#mainLogo').click(function () {
         $(this).animate({
                 top: "0px",
                 left: "40px",
-                fontSize: "80px",
                 width: "250px"
             }, 700, function () {
                 $('.instructions, #searchBar').fadeIn(500, function () {
