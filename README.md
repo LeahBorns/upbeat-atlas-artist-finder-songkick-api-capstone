@@ -7,10 +7,10 @@ AIzaSyBdNRsY4zEYnRfcQ0_ZVVd370D7yuApzhI
 # Upbeat Atlas
 Thinkful (https://www.thinkful.com/) API portfolio project - a responsive app to easily find upcoming shows and directions to your favorite bands.
 
-![Opening Page Screenshot](https://github.com/LeahBorns/artist-finder-songkick-api-capstone/blob/master/github-images/opening-page-screen-shot.png)
-![Search Form Screenshot](https://github.com/LeahBorns/artist-finder-songkick-api-capstone/blob/master/github-images/search-form-screen-shot.png)
-![Popup Screenshot](https://github.com/LeahBorns/artist-finder-songkick-api-capstone/blob/master/github-images/friendly-reminder-screen-shot.png)
-![Results Screenshot](https://github.com/LeahBorns/artist-finder-songkick-api-capstone/blob/master/github-images/results-screen-shot.png)
+![Opening Page Screenshot](https://github.com/LeahBorns/upbeat-atlas-artist-finder-songkick-api-capstone/blob/master/github-images/opening-page-screen-shot.png)
+![Search Form Screenshot](https://github.com/LeahBorns/upbeat-atlas-artist-finder-songkick-api-capstone/blob/master/github-images/search-form-screen-shot.png)
+![Popup Screenshot](https://github.com/LeahBorns/upbeat-atlas-artist-finder-songkick-api-capstone/blob/master/github-images/friendly-reminder-screen-shot.png)
+![Results Screenshot](https://github.com/LeahBorns/upbeat-atlas-artist-finder-songkick-api-capstone/blob/master/github-images/results-screen-shot.png)
 
 ## Introduction
 Finding upcoming shows is as easy as a click of a search button but getting to a show can be a nightmare. Not only is parking impossible but it puts so many cars on the road and increases carbon emissions. With Upbeat Atlas I wanted to create an easy way for event goers to locate their next show with a Google map to easily find directions along with a gentle nudge to consider taking a more sustainable way.
@@ -22,12 +22,12 @@ Why is this app useful? Many event sites are loaded with information: tickets av
 
 Initial wireframes for Upbeat Atlas can be seen below. Wireframes of all key processes were designed along with data flow and user questions for key tasks.
 
-![Initial Wireframes](https://github.com/LeahBorns/artist-finder-songkick-api-capstone/blob/master/github-images/user-flow-wire-frame-thinkful.jpg)
+![Initial Wireframes](https://github.com/LeahBorns/upbeat-atlas-artist-finder-songkick-api-capstone/blob/master/github-images/user-flow-wire-frame-thinkful.jpg)
 
 The app is responsive and was designed to work on mobile, tablet and desktop screens. A friendly popup window appears as users search for artists as information loads to consider choosing a more sustainable travel option.
 
 ## Live Site
-You can access Upbeat Atlas at https://leahborns.github.io/artist-finder-songkick-api-capstone/index.html#page-top
+You can access Upbeat Atlas at https://leahborns.github.io/upbeat-atlas-artist-finder-songkick-api-capstone/index.html
 
 ## Technical
 * The app is built using HTML5, CSS3 and JS 5 and 6.
