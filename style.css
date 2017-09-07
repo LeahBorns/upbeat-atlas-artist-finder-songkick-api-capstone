@@ -32,14 +32,6 @@ nav {
     width: 100%;
     top: 0;
     z-index: 1000;
-    /*display: inline-block;
-    width: 100%;
-    position: fixed;
-    padding-bottom: 5px;
-    border-bottom: 1px solid lightgray;
-    background: white;
-    top: 0;
-    z-index: 1;*/
 }
 
 nav a img {
@@ -51,9 +43,6 @@ nav a img {
     top: 10px;
     left: 35%;
     display: inline-block;
-    /*width: 40%;
-    position: relative;
-    top: 10px;*/
 }
 
 nav div.appName {
@@ -77,19 +66,10 @@ p {
 
 .active {
     background: #55929D;
-    border-bottom: 2px solid lightgray;
     padding-bottom: 15px;
     width: 100%;
     margin-top: 0;
 }
-
-
-/*#mainNav.navbar-shrink {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid white;
-    background: white;
-}*/
 
 
 /*Section*/
@@ -134,7 +114,7 @@ section.search-form {
     /* Hidden by default */
     position: fixed;
     /* Stay in place */
-    z-index: 9999;
+    z-index: 100000;
     /* Sit on top */
     left: 0;
     top: 0;
@@ -186,7 +166,7 @@ section.search-form {
 /* The Close Button */
 
 .close {
-    color: #aaa;
+    color: white;
     float: right;
     font-size: 28px;
     font-weight: bold;

@@ -31,7 +31,7 @@ Why is this app useful? A typical internet user will need to remember a huge num
 
 Initial wireframes for the home page can be seen below. Wireframes of all key processes were designed along with data flow / decision trees for key data processing tasks.
 
-![Initial Wireframes](http://jonwade.digital/github-images/password-vault-wireframe-1.png)
+![Initial Wireframes](https://github.com/LeahBorns/artist-finder-songkick-api-capstone/blob/master/images/ContourBackground.png)
 
 The app was designed to work on mobile as well as tablet and desktop from the outset. Error prompts using Angular's form validation features provides a helpful experience for users as they move through the application. A prominent 'help' message in the main manager screen leads through to instructions for using the site and a FAQ page, with the answer to commonly asked questions. Reminders are provided at key points of the process (for instance, when entering the encryption key into the input field) to ensure the user does not miss critical aspects of the site.
 
