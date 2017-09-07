@@ -106,7 +106,7 @@ function displayResults(artistArray) {
         buildHtmlResults += "<div class='event-display-name' >" + artistArrayValue.displayName + "</div>"
         buildHtmlResults += "<div class='event-details-start-date' >" + artistArrayValue.start.date + "</div>";
 
-        buildHtmlResults += "<div class='event-details-city' >" + artistArrayValue.location.city + "</div>";
+        buildHtmlResults += "<div class='event-details-city' >" + artistArrayValue.location.city + "</div><br>";
 
         buildHtmlResults += "<a href='" + artistArrayValue.uri + "' class='event-details-button' target='_blank'>More Info</a>";
         buildHtmlResults += "</div>";

@@ -214,8 +214,7 @@ section.search-form {
     width: 90%;
     margin-left: 10px;
     margin-right: 20px;
-    margin-top: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 .js-search-results li div.event-display-name {
@@ -321,9 +320,9 @@ section.search-form {
         width: 100%;
     }
     .js-search-results li div.event-display-name {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     .js-search-results li {
-        width: 90%;
+        width: 100%;
     }
 }
