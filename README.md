@@ -22,21 +22,21 @@ Thinkful (https://www.thinkful.com/) API portfolio project - a responsive app to
 ![Screenshots](artist-finder-songkick-api-capstone/images/upbeat-atlas-screenshot.png)
 
 ## Introduction
-Upbeat Atlas
+Finding upcoming shows is as easy as a click of a search button but getting to a show can be a nightmare. Not only is parking impossible but it puts so many cars on the road and increases carbon emissions. With Upbeat Atlas I wanted to create an easy way for event goers to locate their next show with a Google map to easily find directions along with a gentle nudge to consider taking a more sustainable way.
 
 ## Use Case
-Why is this app useful? A typical internet user will need to remember a huge number of, supposedly, unique usernames and passwords to access the sites they visit day-to-day. Any site that requires registration will typically have a username and password associated to it. Whilst browsers have implemented password and username storage protocols, these methods provide risk in the situation where a user's computer is accessed without permission (through theft, hacking etc). Password Vault is designed to provide an easy-to-use, secure method of storing usernames and passwords without relying on the browser or other insecure storage methods (files, offline records etc).
+Why is this app useful? Many event sites are loaded with information: tickets available, other acts and upcoming events, venue location etc. To get directions it requires copying and pasting the venue address or remembering the venue name to input into Google Maps. Upbeat Atlas simplifies that by just providing the venue name, date, and a pinpoint map to get directions. No more searching around for directions when getting those last minute directions.
 
 ## UX
 
 Initial wireframes for the home page can be seen below. Wireframes of all key processes were designed along with data flow / decision trees for key data processing tasks.
 
-![Initial Wireframes](https://github.com/LeahBorns/artist-finder-songkick-api-capstone/blob/master/images/ContourBackground.png)
+![Initial Wireframes](https://github.com/LeahBorns/artist-finder-songkick-api-capstone/github-images/user-flow-wire-frame-thinkful.jpg)
 
 The app was designed to work on mobile as well as tablet and desktop from the outset. Error prompts using Angular's form validation features provides a helpful experience for users as they move through the application. A prominent 'help' message in the main manager screen leads through to instructions for using the site and a FAQ page, with the answer to commonly asked questions. Reminders are provided at key points of the process (for instance, when entering the encryption key into the input field) to ensure the user does not miss critical aspects of the site.
 
 ## Live Site
-You can access Password Vault at http://pw-vault.com
+You can access Upbeat Atlas at https://leahborns.github.io/artist-finder-songkick-api-capstone/index.html#page-top
 
 ## Technical
 * The app is built using the MEAN stack. The front-end is built using HTML5, CSS3 and AngularJS, the back-end using NodeJS with ExpressJS as the web server and MongoDB as the database.
