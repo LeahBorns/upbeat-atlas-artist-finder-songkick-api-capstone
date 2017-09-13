@@ -89,10 +89,35 @@ h2 {
     padding: 10px;
     color: #55929D;
     text-align: center;
+    font-size: 2rem
+}
+
+.funFact {
+    font-size: 1.2rem;
 }
 
 strong {
-    font-size: 2rem;
+    font-size: 1.5rem;
+}
+
+.pleaseConsider {
+    font-size: 1.2rem;
+    background-color: white;
+    padding: 10px;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(right, rgba(217, 147, 81, 0.1), rgba(217, 147, 81, 0.6));
+    /*Safari 5.1-6*/
+    background: -o-linear-gradient(left, rgba(217, 147, 81, 0.1), rgba(217, 147, 81, 0.6));
+    /*Opera 11.1-12*/
+    background: -moz-linear-gradient(left, rgba(217, 147, 81, 0.1), rgba(217, 147, 81, 0.6));
+    /*Fx 3.6-15*/
+    background: linear-gradient(to left, rgba(217, 147, 81, 0.1), rgba(217, 147, 81, 0.6));
+    /*Standard*/
+}
+
+span {
+    font-size: 1.5rem;
+    font-weight: 900;
 }
 
 
