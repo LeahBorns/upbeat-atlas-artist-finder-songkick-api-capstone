@@ -35,20 +35,21 @@ nav {
 }
 
 nav a img {
-    width: 29%;
-    margin-top: 32px;
+    width: 78px;
+    /*margin-top: 32px;*/
     padding-top: 7px;
     padding-left: 10px;
     position: relative;
-    top: 10px;
-    left: 35%;
+    top: 25px;
+    left: 46%;
     display: inline-block;
+    z-index: 10;
 }
 
 nav div.appName {
     display: inline-block;
     width: 60%;
-    margin-left: -95px;
+    margin-left: -65px;
 }
 
 h1 {
@@ -66,9 +67,32 @@ p {
 
 .active {
     background: #55929D;
-    padding-bottom: 15px;
+    padding-bottom: 30px;
     width: 100%;
     margin-top: 0;
+}
+
+.overallMessage {
+    margin: 0 auto;
+    width: 40%;
+    background-color: #55929D;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #888888;
+    position: static;
+    left: 100px;
+}
+
+h2 {
+    background-color: white;
+    padding: 10px;
+    color: #55929D;
+    text-align: center;
+}
+
+strong {
+    font-size: 2rem;
 }
 
 

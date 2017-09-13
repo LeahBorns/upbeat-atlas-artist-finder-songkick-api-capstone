@@ -2,7 +2,7 @@ $(document).ready(function () {
     // hide everything except logo on page load
     $('.appName').hide();
     $('#searchBar').hide();
-
+    $('.overallMessage').show();
 
 
     //step 1 get the input from the user
@@ -19,7 +19,7 @@ $(document).ready(function () {
 
         //pop-up popup to explain travel options
 
-        $(function () {
+        /*$(function () {
             // Get the popup
             var modal = document.getElementById('myPopup');
 
@@ -45,7 +45,7 @@ $(document).ready(function () {
                     modal.style.display = "none";
                 }
             }
-        });
+        });*/
 
         // nav sticks once scrolling
         $(function () {
@@ -135,10 +135,13 @@ $('#mainLogo').click(function () {
         $(this).animate({
                 top: "0px",
                 left: "40px",
-                width: "250px"
+                width: "250px",
+                height: "300px"
+
             }, 700, function () {
                 $('.instructions, #searchBar').fadeIn(500, function () {
                     $('#text-box').focus();
+                    $('.overallMessage').hide();
                 })
             } //End nested animate function
         ); //End animate
