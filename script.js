@@ -66,24 +66,32 @@ $(document).ready(function () {
         $.getJSON("https://api.songkick.com/api/3.0/search/artists.json?query=" + SearchArtist + "&apikey=ibjKuqIpOmtRftG3&jsoncallback=?",
             function (receiveData) {
                 // data is JSON response object
-                console.log(receiveData);
-                console.log(receiveData.resultsPage.results.artist[0].id);
+                console.log(receiveData.resultsPage.totalEntries);
                 //if there are no results it will empty the list
-                if (receiveData.resultsPage.results.length == 0) {
-                    alert("Sorry, artist not found");
+                if (receiveData.resultsPage.totalEntries == 0) {
+                    swal({
+                        title: "Bummer!",
+                        text: "We can't find " + SearchArtist + "!",
+                        icon: "warning",
+                    });
+                } else {
+                    //else there are results, call the display search results
+                    $.getJSON("https://api.songkick.com/api/3.0/artists/" + receiveData.resultsPage.results.artist[0].id + "/calendar.json?apikey=ibjKuqIpOmtRftG3&jsoncallback=?",
+                        function (receiveData) {
+                            // data is JSON response object
+                            console.log(receiveData.resultsPage.totalEntries);
+                            //if there are no results it will empty the list
+                            if (receiveData.resultsPage.totalEntries == 0) {
+                                swal({
+                                    title: "Aw man!",
+                                    text: "Looks like " + SearchArtist + " isn't traveling at this time!",
+                                    icon: "warning",
+                                });
+                            }
+                            //else there are results, call the display search results
+                            displayResults(receiveData.resultsPage.results.event);
+                        })
                 }
-                //else there are results, call the display search results
-                $.getJSON("https://api.songkick.com/api/3.0/artists/" + receiveData.resultsPage.results.artist[0].id + "/calendar.json?apikey=ibjKuqIpOmtRftG3&jsoncallback=?",
-                    function (receiveData) {
-                        // data is JSON response object
-                        console.log(receiveData);
-                        //if there are no results it will empty the list
-                        if (receiveData.resultsPage.results.length == 0) {
-                            alert("Sorry, tour dates not found");
-                        }
-                        //else there are results, call the display search results
-                        displayResults(receiveData.resultsPage.results.event);
-                    })
             })
         $('#searchBar').prop('hidden', false);
     };
