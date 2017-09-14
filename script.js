@@ -84,7 +84,7 @@ $(document).ready(function () {
                             if (receiveData.resultsPage.totalEntries == 0) {
                                 swal({
                                     title: "Aw man!",
-                                    text: "Looks like " + SearchArtist + " isn't traveling at this time!",
+                                    text: "Looks like " + SearchArtist + " isn't touring at this time!",
                                     icon: "warning",
                                 });
                             }
@@ -150,6 +150,7 @@ $('#mainLogo').click(function () {
                 $('.instructions, #searchBar').fadeIn(500, function () {
                     $('#text-box').focus();
                     $('.overallMessage').hide();
+
                 })
             } //End nested animate function
         ); //End animate
