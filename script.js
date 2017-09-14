@@ -144,7 +144,7 @@ $('#mainLogo').click(function () {
                 top: "0px",
                 left: "40px",
                 width: "250px",
-                height: "300px"
+                height: "150px"
 
             }, 700, function () {
                 $('.instructions, #searchBar').fadeIn(500, function () {

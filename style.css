@@ -316,6 +316,12 @@ section.search-form {
 /*Media queries for 3 screen sizes*/
 
 @media only screen and (max-width: 800px) {
+    nav a img {
+        left: 44%;
+    }
+    .overallMessage {
+        width: 60%;
+    }
     section.search-form {
         margin-top: 200px;
     }
@@ -332,6 +338,12 @@ section.search-form {
         margin-left: auto;
         margin-right: auto;
         width: 60%;
+    }
+    nav a img {
+        left: 42%;
+    }
+    .overallMessage {
+        width: 70%;
     }
     h1 {
         font-size: 3rem;
@@ -357,6 +369,12 @@ section.search-form {
     }
     nav {
         position: static;
+    }
+    nav a img {
+        left: 30%;
+    }
+    .overallMessage {
+        width: 80%;
     }
     section.search-form {
         margin-top: 50px;
