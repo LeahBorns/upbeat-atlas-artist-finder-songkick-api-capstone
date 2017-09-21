@@ -86,11 +86,12 @@ p {
 }
 
 h2 {
+    font-family: 'Amatic SC', cursive;
     background-color: white;
     padding: 10px;
     color: #55929D;
     text-align: center;
-    font-size: 2rem
+    font-size: 2.4rem
 }
 
 .funFact {
@@ -125,13 +126,13 @@ span {
     font-size: 1.2rem;
     background-color: white;
     /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(right, rgba(217, 147, 81, 0.1), rgba(217, 147, 81, 0.5));
+    background: -webkit-linear-gradient(right, rgba(217, 147, 81, 0.2), rgba(217, 147, 81, 0.3));
     /*Safari 5.1-6*/
-    background: -o-linear-gradient(left, rgba(217, 147, 81, 0.1), rgba(217, 147, 81, 0.5));
+    background: -o-linear-gradient(left, rgba(217, 147, 81, 0.2), rgba(217, 147, 81, 0.3));
     /*Opera 11.1-12*/
-    background: -moz-linear-gradient(left, rgba(217, 147, 81, 0.1), rgba(217, 147, 81, 0.5));
+    background: -moz-linear-gradient(left, rgba(217, 147, 81, 0.2), rgba(217, 147, 81, 0.3));
     /*Fx 3.6-15*/
-    background: linear-gradient(to left, rgba(217, 147, 81, 0.1), rgba(217, 147, 81, 0.5));
+    background: linear-gradient(to left, rgba(217, 147, 81, 0.2), rgba(217, 147, 81, 0.3));
     /*Standard*/
 }
 
