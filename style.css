@@ -342,6 +342,9 @@ section.search-form {
     nav a img {
         left: 42%;
     }
+    nav {
+        position: static;
+    }
     .overallMessage {
         width: 70%;
     }
@@ -356,7 +359,7 @@ section.search-form {
         margin-right: auto;
     }
     section.search-form {
-        margin-top: 400px;
+        margin-top: 300px;
     }
     .js-search-results li {
         width: 90%;

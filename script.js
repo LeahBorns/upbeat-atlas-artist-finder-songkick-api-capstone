@@ -14,6 +14,8 @@ $(document).ready(function () {
         //get the value from the input box
         let userSearch = $("#text-box").val();
 
+
+
         //use the value to call the getResults function defined below
         DataFromUser(userSearch);
 
@@ -58,6 +60,7 @@ $(document).ready(function () {
                 }
             });
         });
+        $("#text-box").val('');
     });
 
     //step2 using the input from the user make the API call to get the JSON response
